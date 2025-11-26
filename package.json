@@ -1,15 +1,38 @@
 {
-  "name": "my-storybook",
-  "private": true,
-  "version": "0.0.0",
+  "name": "react-storybook-cj",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
+  "keywords": [
+    "storybook",
+    "react"
+  ],
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/chrxsdev/storybook",
+    "type": "git"
+  },
+  "files": [
+    "dist/"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
   "scripts": {
-    "dev": "npm run storybook",
-    "build": "tsc -b && vite build",
+    "dev": "yarn storybook",
+    "build": "yarn clean && tsc && yarn copy-files",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 src/**/*.css dist/"
   },
   "dependencies": {
     "react": "^19.2.0",
@@ -27,18 +50,20 @@
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react-swc": "^4.2.2",
+    "@vitest/browser-playwright": "^4.0.14",
+    "@vitest/coverage-v8": "^4.0.14",
+    "copyfiles": "^2.4.1",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "eslint-plugin-storybook": "10.0.8",
     "globals": "^16.5.0",
+    "playwright": "^1.57.0",
+    "rimraf": "^6.1.2",
     "storybook": "10.0.8",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4",
-    "vitest": "^4.0.14",
-    "playwright": "^1.57.0",
-    "@vitest/browser-playwright": "^4.0.14",
-    "@vitest/coverage-v8": "^4.0.14"
+    "vitest": "^4.0.14"
   }
 }
