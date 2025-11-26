@@ -1,7 +1,7 @@
 {
   "name": "react-storybook-cj",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.1.2",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "type": "module",
@@ -23,8 +23,8 @@
     ]
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react": "^16.8.0 ||^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
   },
   "scripts": {
     "dev": "yarn storybook",
