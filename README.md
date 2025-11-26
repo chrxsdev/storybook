@@ -9,13 +9,9 @@ What you'll find here:
 Quick start:
 1. Install dependencies:
 ```
-yarn
+yarn install
 ```
-2. Start Storybook (open Storybook to preview components):
-```
-yarn storybook
-```
-3. (Optional) Run the app locally with Vite:
+2. Start Storybook (open Storybook to preview components) or run the app locally with Vite:
 ```
 yarn dev
 ```
